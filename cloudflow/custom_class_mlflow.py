@@ -1,18 +1,14 @@
 import mlflow
 import os
-
-import os
 import pkgutil
 import importlib
 import sys
-import mlflow
 import cloudpickle
 
 class custom_ml_flow_model(mlflow.pyfunc.PythonModel):
 
     def __init__(self):
         return
-    
     
     def variable_for_value(self, value):
         for n,v in globals().items():
@@ -32,7 +28,7 @@ class custom_ml_flow_model(mlflow.pyfunc.PythonModel):
             print("loading {}".format(name))
             with open(artifact, "rb") as f:
                 exec("self.{} =  cloudpickle.load(f)".format(name))
-            print("chargé")
+            print("loading {} --> DONE".format(name))
                 
 
         signature = inspect.signature(self.__predict__)
@@ -75,18 +71,18 @@ class custom_ml_flow_model(mlflow.pyfunc.PythonModel):
         
         name_pred = "__predict__"
         path_pred = os.path.join(artifact_path, '{}.pkl'.format(name_pred))
+        artifacts[name_pred] = path_pred
+        
         with open(path_pred, "wb") as f:
             cloudpickle.dump(predict_function, f)
-            
-            artifacts[name_pred] = path_pred
 
         for model in models:
-            name = self.variable_for_value(model)
-            path = os.path.join(artifact_path, "{}.pkl".format(name))
-            with open(path, "wb") as f:
+            name_model = self.variable_for_value(model)
+            path_model = os.path.join(artifact_path, "{}.pkl".format(name_model))
+            artifacts[name_model] = path_model
+            
+            with open(path_model, "wb") as f:
                 cloudpickle.dump(model, f)
-                
-            artifacts[name] = path
             
         return artifacts
         
@@ -104,7 +100,7 @@ class custom_ml_flow_model(mlflow.pyfunc.PythonModel):
         
         print(artifacts)
         
-        for name, inter_model in artifacts.items():
+        for name, _ in artifacts.items():
             os.remove(artifacts[name])
                             
     def predict(self, context, args): 
@@ -123,9 +119,9 @@ class custom_ml_flow_model(mlflow.pyfunc.PythonModel):
             if arg not in args.keys():
                 args[arg] = self.arg_default_value[arg]
         
-        new_dict = {}
+        dict_args = {}
         
-        for x, y in self.dict_args___predict__.items():
-            new_dict[x] = eval(y)  
+        for name_arg, value_arg in self.dict_args___predict__.items():
+            dict_args[name_arg] = eval(value_arg)  
             
-        return self.__predict__(**new_dict)
+        return self.__predict__(**dict_args)
