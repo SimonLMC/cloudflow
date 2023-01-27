@@ -1,2 +1,2 @@
-from cloudflow_model import cloudflow_model
-from custom_class_mlflow import custom_ml_flow_model
+from cloudflow.cloudflow_model import cloudflow_model
+from cloudflow.custom_class_mlflow import custom_ml_flow_model

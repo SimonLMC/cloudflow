@@ -29,7 +29,7 @@ class custom_ml_flow_model(mlflow.pyfunc.PythonModel):
         
         for name, artifact in context.artifacts.items():
             list_artifacts_name.append(name)
-            print(name)
+            print("loading {}".format(name))
             with open(artifact, "rb") as f:
                 exec("self.{} =  cloudpickle.load(f)".format(name))
             print("chargé")
@@ -51,7 +51,7 @@ class custom_ml_flow_model(mlflow.pyfunc.PythonModel):
             if arg in list_artifacts_name:
                 dict_args___predict__[arg] = "self.{}".format(arg)
             else :
-                dict_args___predict__[arg] = "params_predict[\"{}\"]".format(arg)
+                dict_args___predict__[arg] = "args[\"{}\"]".format(arg)
                 
         self.dict_args___predict__ = dict_args___predict__
         
@@ -107,7 +107,7 @@ class custom_ml_flow_model(mlflow.pyfunc.PythonModel):
         for name, inter_model in artifacts.items():
             os.remove(artifacts[name])
                             
-    def predict(self, context, params_predict): 
+    def predict(self, context, args): 
         """
         make and combine the prediction of all the differents models on the differents scoring tables
     
@@ -120,8 +120,8 @@ class custom_ml_flow_model(mlflow.pyfunc.PythonModel):
         """
         
         for arg in self.arg_default_value:
-            if arg not in params_predict.keys():
-                params_predict[arg] = self.arg_default_value[arg]
+            if arg not in args.keys():
+                args[arg] = self.arg_default_value[arg]
         
         new_dict = {}
         

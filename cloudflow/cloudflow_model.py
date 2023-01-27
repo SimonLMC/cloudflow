@@ -1,6 +1,6 @@
 import mlflow
 import os
-from custom_class_mlflow import custom_ml_flow_model
+from cloudflow.custom_class_mlflow import custom_ml_flow_model
 
 
 class cloudflow_model():
