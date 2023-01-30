@@ -3,7 +3,7 @@ import setuptools
 
 setuptools.setup(
     name='cloudflow',
-    version='0.0.3',
+    version='0.1.3',
     author='Simon Le Mouellic',
     author_email='lemouellicsimon@gmail.com',
     description='Testing installation of Package',
