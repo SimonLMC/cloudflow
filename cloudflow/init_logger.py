@@ -15,6 +15,7 @@ def init_logger(stream=True, file=False, level="INFO", file_path=None):
     Raises:
         ValueError: Raise value if no handler is provided that is you must at least set stream or file to True
     """
+
     handlers = []
     if file:
         file_formatter = logging.Formatter(
