@@ -1,5 +1,4 @@
 **/.ipynb_checkpoints/
-*.ipynb
 *.pyc
 /venv/
 strike_env/
