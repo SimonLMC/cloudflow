@@ -1,6 +1,6 @@
 # CloudFlow 
 
-![alt text](https://github.com/SimonLMC/cloudflow/blob/image/cloudflow_logo.png?raw=true)
+![alt text](https://github.com/SimonLMC/cloudflow/blob/main/image/cloudflow_logo.svg?raw=true)
 
 
 Cloudflow is a Python package that combines two powerful tools for machine learning model management: Cloudpickle and MLflow. 
