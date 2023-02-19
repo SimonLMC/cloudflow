@@ -1,5 +1,8 @@
+<<<<<<< Updated upstream
 # CloudFlow 
 
+=======
+>>>>>>> Stashed changes
 ![alt text](https://github.com/SimonLMC/cloudflow/blob/main/image/cloudflow_logo.svg?raw=true)
 
 
