@@ -6,7 +6,7 @@ from cloudflow import custom_class_mlflow
 
 
 class cloudflow_model():
-    def __init__(self, log_level = "INFO"):
+    def __init__(self, log_level = "ERROR"):
         init_logger.init_logger(level=log_level)
         self.model_to_save = custom_class_mlflow.custom_ml_flow_model()
         return 
