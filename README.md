@@ -3,7 +3,7 @@
 
 # 💡 What is __Cloudflow__ ? 
 
-Cloudflow is a Python package that combines two powerful tools for machine learning model management: Cloudpickle and MLflow. 
+__Cloudflow is a Python package that combines two powerful tools for machine learning model management: Cloudpickle and MLflow.__
 
 - Cloudpickle is a serialization library that allows Python objects to be serialized and deserialized across different Python processes or even different Python versions. This is especially useful for machine learning models, which can be complex and difficult to share between different environments.
 
