@@ -5,4 +5,6 @@ strike_env/
 /log/
 *.log
 **/__pycache__/
-image/.DS_Store
+*.DS_Store
+*.egg-info
+*.gz
