@@ -1,5 +1,7 @@
+
 ![alt text](https://github.com/SimonLMC/cloudflow/blob/main/image/cloudflow_logo.svg?raw=true)
 
+# 💡 What is __Cloudflow__ ? 
 
 Cloudflow is a Python package that combines two powerful tools for machine learning model management: Cloudpickle and MLflow. 
 
@@ -20,7 +22,7 @@ With traditional approaches, it can be challenging to __combine multiple models 
 - [Getting started](#getting-started)
 - [API](#api)
 
-## Installation
+## 🦾 Installation
 
 > You need Python 3.6 or above.
 From the terminal (or Anaconda prompt in Windows), enter:
@@ -29,12 +31,12 @@ From the terminal (or Anaconda prompt in Windows), enter:
 pip install cloudflow
 ```
 
-## Getting started
+## 🚀 Getting started
 
 - [Saving](#Saving)
 - [Loading](#Loading)
 
-## Saving
+## 💾 Saving
 
 __All code from the saving part of this section can be found in demo/MLFLOW_save folder__
 
@@ -117,7 +119,7 @@ with mlflow.start_run(experiment_id = experiment_id) as run:
 
 ```
 
-## Loading
+## 😎 Loading
 
 __All code from the Loading part of this section can be found in demo/MLFLOW_load folder__
 
@@ -130,7 +132,7 @@ loaded_model = cloudflow.cloudflow_model()
 
 loaded_model.load_model(tracking_uri  = "/saving_path"
                         experiment_id = "experiment_name" ,
-                        run_id        = "226dc785fb264a03b097037756fccc64")
+                        run_id        = "# your run id")
 
 ```
 
@@ -138,11 +140,11 @@ And Finaly, we can use the saved predict_function
 
 ```python
 loaded_model.predict(input_type = "image",
-                     data       = "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/coco_sample.png")
+                     data       = "https://huggingface.co/  datasets/huggingface/documentation-images/resolve/main/coco_sample.png")
 
 ```
 
-## API
+## 📖 API
 
 You can choose your logging level when you initialize the cloudflow model
 ```python
