@@ -68,7 +68,7 @@ The structure of the projet is as follow.
     ├── SAVE_MLflow.py             #
     └── ...
 
-
+The saved "model" will use functions from all of those files.
 
 ```python
 import download_file
