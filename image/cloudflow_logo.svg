@@ -20,7 +20,7 @@
   <path opacity="1.000000" stroke="none" d="M 85.854 141.977 C 85.915 143.646 85.553 145.11 83.87 145.88 C 82.108 146.686 80.31 146.649 78.785 145.484 C 78.085 144.949 77.43 143.895 77.398 143.053 C 77.351 141.769 77.96 140.506 79.389 140.031 C 80.064 139.807 82.663 139.506 83.585 139.45 C 84.542 139.857 82.657 140.036 83.509 141.366 C 83.815 141.542 85.631 142.174 85.854 141.977 Z" style="fill: rgb(59, 126, 188);" transform="matrix(1, 0, 0, 1, -155.213145, 204.556202)" bx:origin="8.597379 4.56791"/>
   <path style="stroke-width: 3px; fill: rgb(59, 126, 189); stroke: rgb(36, 104, 166);" d="M 109.563 137.7 L 139.809 137.851" transform="matrix(1, 0, 0, 1, -155.213145, 204.556202)" bx:origin="1.342403 221.916106"/>
   <path style="stroke-width: 3px; fill: rgb(59, 126, 189); stroke: rgb(36, 104, 166);" d="M 66.198 138.242 L 96.887 137.865" transform="matrix(1, 0, 0, 1, -155.213145, 204.556202)" bx:d="M 66.198 138.242 R 96.887 137.865 1@f22e523b" bx:origin="2.736066 88.608457"/>
-  <g clip-path="url(#clip0)" transform="matrix(0.531156, 0, 0, 0.531156, -1041.678223, -119.849419)" style="">
-    <text style="fill: url(#gradient-2); font-family: &quot;Product Sans&quot;, &quot;Product Sans_MSFontService&quot;, sans-serif; font-size: 175.09px; font-weight: 700; letter-spacing: 0.1px; line-height: 274.119px; white-space: pre;" x="2088.13" y="951.652">Cloudflow</text>
+  <g clip-path="url(#clip0)" transform="matrix(0.531156, 0, 0, 0.531156, -1069.098389, -117.072464)" style="">
+    <text style="fill: url(#gradient-2); font-family: &quot;Product Sans&quot;, &quot;Product Sans_MSFontService&quot;, sans-serif; font-size: 212.744px; font-weight: 700; letter-spacing: 0.1px; line-height: 274.119px; white-space: pre;" x="2088.13" y="951.652">Cloudflow</text>
   </g>
 </svg>
