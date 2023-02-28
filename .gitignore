@@ -1,0 +1,10 @@
+**/.ipynb_checkpoints/
+*.pyc
+/venv/
+strike_env/
+/log/
+*.log
+**/__pycache__/
+*.DS_Store
+*.egg-info
+*.gz
