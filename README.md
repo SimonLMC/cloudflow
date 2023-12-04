@@ -213,9 +213,9 @@ import cloudflow
 
 loaded_model = cloudflow.cloudflow_model()
 
-loaded_model.load_model(tracking_uri  = "/saving_path"
+loaded_model.load_model(tracking_uri  = "/saving_path",
                         experiment_id = "experiment_name" ,
-                        run_id        = "# your run id") #from the run.info.run_id
+                        model_id        = "# your run id") #from the run.info.run_id
 
 ```
 
